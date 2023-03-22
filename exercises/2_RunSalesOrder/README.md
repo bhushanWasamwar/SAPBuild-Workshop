@@ -5,7 +5,7 @@
 - [Monitoring the process flow](#processflow)
 - [Accessing the tasks](#accessingtask)
 
-# Step 11 <br>
+# Step 1 <br>
 ## Release business process project <a name="releaseproject"></a>
 <br>
 To run the process you have to first release and then deploy the business process project.<br>
