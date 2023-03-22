@@ -64,17 +64,50 @@ Details of the payload: <br><br> </br>
 
 3. Since we have created API Trigger for the Business process ,let’s test the process with API Trigger in <b>Monitor</b> section before we start the process from SAP Build Apps.<br> </br>
 <ul>
-  <li>Navigate to <b>Monitor —> Manage —> Process and Workflow Definitions</b> .</li>
-  <li>Search for the project <b>Sales Order Management</b> that you have created.</li>
-  <li>Click on <> Start New Instance.</li>
+  <li>Navigate to <b>Monitor —> Manage —> Process and Workflow Definitions</b> .</li><br> </br>
+  <li>Search for the project <b>Sales Order Management</b> that you have created.</li><br> </br>
+  <li>Click on <b> Start New Instance</b>.</li><br> </br>
+  <li>Paste the payload that you have copied in Step 2.</li><br> </br>
+</ul>
+<input text=" 1.  >> Don't modify the payload when you integrate with SAP Build Apps."><br> </br>
+
+Since the Definition ID is already available in the Monitor section , remove the definition ID and context.<br><br> </br>
+You payload should like below after providing values to the fields.<br><br> </br>
+<textarea id="salesorderdetails" name="salesorderdetails" rows="4" cols="50"> { "salesorderdetails": { "material": "Laptop", "orderAmount": 900000, "shipToParty": "ABCD", "salesOrderType": "01", "salesOrganisation": "01", "distributionChannel": "01", "shippingCountry": "India", "expectedDeliveryDate": "2023-05-08", "division": "01" } } </textarea><br></br>
+ <img src="./images/10.png"> <br> </br>
+ <ul>
+  <li>Click on <b>Start New Instance and Close</b>.</li><br></br>
 </ul>
 
+# Step 4 <br>
+## Monitoring the process flow <a name="processflow"></a>
+<br>
+Monitoring business process is one of the key aspect of the automated processes. Technical monitoring is an administrator job where a process admin proactively and consistently monitors the process performance, identifies any issues in the process and takes necessary actions to ensure business process continuity.<br><br></br>
+<b>SAP Build </b> provides different applications to monitor and manage different process artefacts. These applications are available under the <b>Monitor</b> tab.
+<p>
+1. All deployed processes can be accessed under Processes and Workflows under Manage. To monitor all the running instances of the process, you have to go to Monitor then <b>Process and Workflow Instances</b>.<br><br></br>
+ <img src="./images/11.png"> <br><br> </br>
+  
+In there, you will see all the running, erroneous and suspended process instances. Use the filter bar to get a more customized view of the process instances based on different statutes like running, completed, suspended, terminated etc.<br> </br>
 
+1. Choose your process instance that was just triggered above.<br> </br>
+<input text=" Explore different process monitoring options. Observe the process instance information, process context which is the actual process data flowing across different activities in the process and the execution logs where you can see entire trace of how the process has been progressing with some basic runtime information of each activity."><br> </br>
+ <img src="./images/12.png"> <br><br> </br>
 
+ 2. As you can see the process is waiting for the task to be completed. These tasks are generated from the forms that are added in the process and can be accessed via the<b> My Inbox</b> application.
+ <img src="./images/13.png"> <br><br> </br>
+  Notice the Recipients list. This is the same as configured in the General section of the Approval Form. The task will go into the inboxes of all the recipients. <br><br> </br>
 
-
-
-
+  # Step 4 <br>
+## Accessing the tasks <a name="accessingtask"></a>
+<br>
+1. Tasks are the request for the users to participate in an approval or review process. These tasks appear in the<b> My Inbox </b>application shipped with <b>SAP Build</b>. User can claim, approve and reject the task from their inbox.
+<br><br> </br>
+ <img src="./images/14.png"> <br><br> </br>
+2. Once you <b>approve/reject </b>the approval task, <b>refresh</b> the inbox again to get the final notification based on action taken.<br><br> </br>
+ <img src="./images/15.png"> <br><br> </br>
+3. Once you acknowledge the notification sent via the approval process, the process will be completed.<br><br> </br>
+<img src="./images/16.png"> <br><br> </br>
 
 
 
